@@ -103,8 +103,6 @@ class TeamsPlugin extends Plugin {
         if ($regex_subject_ignore && preg_match("/$regex_subject_ignore/i", $ticket->getSubject())) {
             $ost->logDebug('Ignored Message', 'Teams notification was not sent because the subject (' . $ticket->getSubject() . ') matched regex (' . htmlspecialchars($regex_subject_ignore) . ').');
             return;
-        } else {
-            error_log("$ticket_subject didn't trigger $regex_subject_ignore");
         }
 
         // Build the payload with the formatted data:
