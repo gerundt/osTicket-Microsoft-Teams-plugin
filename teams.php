@@ -51,7 +51,7 @@ class TeamsPlugin extends Plugin {
         $type = 'Issue Updated: ';
         global $cfg;
         if (!$cfg instanceof OsticketConfig) {
-            error_log("Slack plugin called too early.");
+            error_log("Teams plugin called too early.");
             return;
         }
         if (!$entry instanceof MessageThreadEntry) {
@@ -94,7 +94,7 @@ class TeamsPlugin extends Plugin {
         }
         $url = $this->getConfig()->get('teams-webhook-url');
         if (!$url) {
-            $ost->logError('Teams Plugin not configured', 'You need to read the Readme and configure a webhook URL before using this.');
+            $ost->logError('Teams plugin not configured', 'You need to read the Readme and configure a webhook URL before using this.');
         }
 
         // Check the subject, see if we want to filter it.

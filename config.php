@@ -33,7 +33,7 @@ class TeamsPluginConfig extends PluginConfig {
 
         return array(
             'teams'                      => new SectionBreakField(array(
-                'label' => $__('Slack notifier'),
+                'label' => $__('Teams notifier'),
                 'hint'  => $__('Readme first: https://github.com/ipavlovi/osTicket-Microsoft-Teams-plugin')
                     )),
             'teams-webhook-url'          => new TextboxField(array(
