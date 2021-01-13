@@ -23,7 +23,7 @@ This plugin uses CURL and was designed/tested with osTicket-1.10.1
 5. After that, go back to the list of plugins and tick the checkbox next to "MS Teams Notifier" and select the "Enable" button.
 
 ## MS Teams Setup:
-- Open MS Teams, navigate to channel and open COnnectors from elipsoids (...) menu
+- Open MS Teams, navigate to channel and open Connectors from ellipsis (…) menu
 - Select Incoming Webhook and configure
 - Choose webhook name and optionally change associated image
 - Click Create
