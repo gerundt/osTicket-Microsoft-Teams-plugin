@@ -49,15 +49,6 @@ class TeamsPluginConfig extends PluginConfig {
                 'configuration' => [
                     'size'   => 30,
                     'length' => 200
-                ],
-                    ]),
-            'message-template'           => new TextareaField([
-                'label'         => $__('Message Template'),
-                'hint'          => $__('The main text part of the Teams message, uses Ticket Variables, for what the user typed, use variable: %{slack_safe_message}'),
-                // "<%{url}/scp/tickets.php?id=%{ticket.id}|%{ticket.subject}>\n" // Already included as Title
-                'default'       => "%{ticket.name.full} (%{ticket.email}) in *%{ticket.dept}* _%{ticket.topic}_\n\n```%{slack_safe_message}```",
-                'configuration' => [
-                    'html' => FALSE,
                 ]
                     ])
         );
