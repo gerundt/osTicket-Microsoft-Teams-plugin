@@ -239,7 +239,7 @@ class TeamsPlugin extends Plugin {
                     'targets' => [
                         [
                             'os' => 'default',
-                            'uri' => $cfg->getUrl() . '/scp/tickets.php?id=' . $ticket->getId(),
+                            'uri' => $cfg->getUrl() . 'scp/tickets.php?id=' . $ticket->getId(),
                         ]
                     ]
                 ]
