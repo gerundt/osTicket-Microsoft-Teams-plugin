@@ -227,7 +227,7 @@ class TeamsPlugin extends Plugin {
             'title' => $this->format_text($type . $ticket->getSubject()),
             'sections' => [
                 [
-                    'activityTitle' => ($ticket->getName() ? $ticket->getName() : 'Guest ') . ' (sent by ' . $ticket->getEmail() . ')',
+                    'activityTitle' => ($ticket->getName() ? $ticket->getName() : 'Guest ') . ' &lt;' . $ticket->getEmail() . '&gt;',
                     'activitySubtitle' => $ticket->getUpdateDate(),
                     'activityImage' => $this->get_gravatar($ticket->getEmail()),
                 ],
