@@ -120,15 +120,17 @@ class TeamsPlugin extends Plugin {
             );
 
             // Actually send the payload to Teams:
-            if (curl_exec($ch) === false) {
+            $response = curl_exec($ch);
+            if ($response === false) {
                 throw new \Exception($url . ' - ' . curl_error($ch));
             } else {
                 $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
                 if ($statusCode != '200') {
                     throw new \Exception(
                         'Error sending to: ' . $url
-                        . ' Http code: ' . $statusCode
-                        . ' curl-error: ' . curl_errno($ch));
+                        . ' HTTP code: ' . $statusCode
+                        . ' curl-error: ' . curl_errno($ch)
+                        . ' response: ' . $response);
                 }
             }
         } catch (\Exception $e) {
