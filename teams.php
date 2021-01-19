@@ -207,12 +207,12 @@ class TeamsPlugin extends Plugin {
     }
 
     /**
-     * @param $ticket
+     * @param Ticket $ticket
      * @param string $color
      * @param null $type
      * @return false|string
      */
-    private function createJsonMessage($ticket, $type = null, $color = 'AFAFAF')
+    private function createJsonMessage(Ticket $ticket, $type = null, $color = 'AFAFAF')
     {
         global $cfg;
         if ($ticket->isOverdue()) {
